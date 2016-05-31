@@ -59,22 +59,21 @@ function TNERDTree()
 endfunction
 
 map <F4> :call TNERDTree()<CR>
-map <F5> :TbToggle<CR>
 set pastetoggle=<F12>                       " Toggle between ':set paste' and ':set nopaste'.  Pasting mouse-selected multi-line text appears staggered in 'nopaste' mode. Hit F12, then paste to prevent that.
 
 if &diff
     " Dumb hack to get Tabbar not to open on vimdiff
-    let g:Tb_MoreThanOne=5
+"    let g:Tb_MoreThanOne=5
     set diffopt+=iwhite     " Ignore white space
     set noro                " open files in write mode
 else
     " Setup Tabbar plugin
-    let g:Tb_UseSingleClick=1
-    let g:Tb_SplitBelow=0
-    let g:Tb_VSplit=1
-    let g:Tb_MinSize=5
-    let g:Tb_MaxSize=35
-    let g:Tb_AutoUpdt=1
+    let g:buffergator_autoexpand_on_split = 0
+    let g:buffergator_sort_regime = "filepath"
+    let g:buffergator_autodismiss_on_select = 0
+    let g:buffergator_autoupdate = 1
+    map <F3> :BuffergatorToggle<CR>
+    set noequalalways
 endif
 
 
