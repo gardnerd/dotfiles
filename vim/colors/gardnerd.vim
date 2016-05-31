@@ -1,5 +1,6 @@
 " My custom color setting
 set background=dark
+set cursorline
 
 hi CursorLine cterm=bold     ctermfg=NONE       ctermbg=235
 hi Comment    cterm=NONE     ctermfg=246        ctermbg=NONE
