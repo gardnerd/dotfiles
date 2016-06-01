@@ -40,3 +40,26 @@ endfunction
 " Auto Cleanup after writing file
 autocmd! BufWrite           *       call CleanUp()
 "------------------------------------------------------------------------------
+" Toggle ignore whitespaces (VimDiff or GitGutter)
+function ToggleIgnoreWhite()
+    if &diff
+        if &diffopt =~ 'iwhite'
+            set diffopt-=iwhite
+            echo "-iwhite"
+        elseif &diffopt !~ 'iwhite'
+            set diffopt+=iwhite
+            echo "+iwhite"
+        endif
+    else
+        if g:gitgutter_diff_args =~ '-w'
+            let g:gitgutter_diff_args = ''
+            GitGutter
+            echo "-iwhite"
+        elseif g:gitgutter_diff_args !~ '-w'
+            let g:gitgutter_diff_args = '-w'
+            GitGutter
+            echo "+iwhite"
+        endif
+    endif
+endfunction
+map <F8> :call ToggleIgnoreWhite()<CR>
