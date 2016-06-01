@@ -43,3 +43,12 @@ let g:buffergator_autoupdate = 1
 map <F3> :BuffergatorToggle<CR>
 set noequalalways
 "------------------------------------------------------------------------------
+" Gitgutter
+let g:gitgutter_sign_column_always = 1
+let g:gitgutter_diff_args = '-w'
+nmap ]c <Plug>GitGutterNextHunk " Default binding
+nmap [c <Plug>GitGutterPrevHunk " Default binding
+nmap ,hs <Plug>GitGutterStageHunk
+nmap ,hr <Plug>GitGutterUndoHunk
+nmap ,hv <Plug>GitGutterPreviewHunk
+"------------------------------------------------------------------------------
