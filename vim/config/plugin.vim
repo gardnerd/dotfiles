@@ -1,4 +1,6 @@
 " Config for plugins
+"
+" This file handles all basic configuration for plugins.
 "------------------------------------------------------------------------------
 " Pathogen
 call pathogen#infect()

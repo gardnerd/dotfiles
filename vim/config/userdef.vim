@@ -1,4 +1,6 @@
 " User defined scripts etc. for vim
+"
+" Any VimScripts or other user created functions go here.
 "------------------------------------------------------------------------------
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala,verilog let b:comment_leader = '// '
@@ -20,9 +22,6 @@ fun! s:VisualSearch()
   let @/ = '\V'.substitute(escape(@", '\'), '\n', '\\n', 'g')
   let @" = old
 endf
-"------------------------------------------------------------------------------
-" turn off clipboard
-set clipboard=exclude:.*
 "------------------------------------------------------------------------------
 " Trim trailing spaces (at the end of each line) and replace existing TAB's in the entire file with 4 spaces.
 function CleanUp()

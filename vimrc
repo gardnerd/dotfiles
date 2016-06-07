@@ -36,6 +36,9 @@ set scrolloff=3 "Scroll offset of 3
 set sidescrolloff=3
 set bs=indent,eol,start " Set Backspace mode
 "------------------------------------------------------------------------------
+" turn off clipboard
+set clipboard=exclude:.*
+"------------------------------------------------------------------------------
 " TAB management
 set expandtab                               " Expand new TAB characters into spaces
 set tabstop=4                               " Sets how many space-width will be used for every (new) TAB added to a file
