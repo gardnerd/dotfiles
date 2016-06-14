@@ -39,7 +39,6 @@ map <F4> :call TNERDTree()<CR>
 "------------------------------------------------------------------------------
 " Buffergator
 let g:buffergator_autoexpand_on_split = 0
-let g:buffergator_sort_regime = "filepath"
 let g:buffergator_autodismiss_on_select = 0
 let g:buffergator_autoupdate = 1
 map <F3> :BuffergatorToggle<CR>
