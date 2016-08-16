@@ -55,3 +55,6 @@ nmap ,hr <Plug>GitGutterUndoHunk
 nmap ,hv <Plug>GitGutterPreviewHunk
 highlight link GitGutterDeleteLine NONE
 "------------------------------------------------------------------------------
+"Fzf
+set rtp+=~/.fzf
+"------------------------------------------------------------------------------
