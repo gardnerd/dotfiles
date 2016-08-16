@@ -22,7 +22,7 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 
-# Vim da best
+# best editor
 export EDITOR=vim
 
 # use vi binds in shell
@@ -37,25 +37,10 @@ umask 0022
 
 # Some color definitions
 RESET="\e[0m"
-DEFAULT="\e[39m"
 BOLD="\e[1m"
 
-BLACK="\e[30m"
-RED="\e[31m"
 GREEN="\e[32m"
-YELLOW="\e[33m"
 BLUE="\e[34m"
-MAGENTA="\e[35m"
-CYAN="\e[36m"
-LIGHTGRAY="\e[37m"
-DARKGRAY="\e[90m"
-LIGHTRED="\e[91m"
-LIGHTGREEN="\e[92m"
-LIGHTYELLOW="\e[93m"
-LIGHTBLUE="\e[94m"
-LIGHTMAGENTA="\e[95m"
-LIGHTCYAN="\e[96m"
-WHITE="\e[97m"
 
 #########################
 # Aliases
