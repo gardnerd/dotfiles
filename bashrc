@@ -59,6 +59,9 @@ alias mv='mv -i'
 # Functions and other stuff
 ############################
 
+# Enable Fuzzy Find
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 function parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
