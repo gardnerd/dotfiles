@@ -10,7 +10,7 @@ hi Visual     cterm=NONE     ctermfg=NONE       ctermbg=237
 hi Search     cterm=NONE     ctermfg=black      ctermbg=yellow
 
 " Diff
-hi DiffAdd    cterm=bold     ctermfg=NONE          ctermbg=28
+hi DiffAdd    cterm=bold     ctermfg=NONE          ctermbg=22
 hi DiffDelete cterm=bold     ctermfg=NONE          ctermbg=88
 hi DiffChange cterm=bold     ctermfg=NONE          ctermbg=24
 hi DiffText   cterm=bold     ctermfg=NONE          ctermbg=darkyellow
