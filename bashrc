@@ -66,9 +66,14 @@ function parse_git_branch () {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-# Bash prompt with git branch
-GIT_LOCAL_BRANCH="\$(git branch &>/dev/null && echo -n '<')\$(basename \$(git symbolic-ref -q HEAD 2>/dev/null) 2>/dev/null)\$(git branch &>/dev/null && echo -n '>')"
-export PS1="[\[$BOLD\]\h \[$GREEN\]$GIT_LOCAL_BRANCH \[$BLUE\]\W\[$RESET\]]$ "
+# Bash prompt with git branch and working copy
+GIT_WORKING_COPY="\$(git branch &>/dev/null && basename \$(git rev-parse --show-toplevel))"
+GIT_LOCAL_BRANCH="\$(git branch &>/dev/null && git rev-parse --abbrev-ref HEAD)"
+
+# Only print if in a repo
+GIT_INFO="\$(git branch &>/dev/null && echo -n $GIT_WORKING_COPY && echo -n ' <' && echo -n $GIT_LOCAL_BRANCH && echo -n '>')"
+
+export PS1="[\[$BOLD\]\h \[$GREEN\]$GIT_INFO \[$BLUE\]\W\[$RESET\]]$ "
 
 export TERM=xterm-256color
 xrdb $HOME/.Xresources
