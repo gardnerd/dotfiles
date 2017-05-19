@@ -3,6 +3,7 @@ set background=dark
 set cursorline
 
 hi CursorLine cterm=bold     ctermfg=NONE       ctermbg=235
+hi ColorColumn cterm=bold     ctermfg=NONE       ctermbg=235
 hi Comment    cterm=NONE     ctermfg=246        ctermbg=NONE
 hi LineNR     cterm=NONE     ctermfg=246        ctermbg=NONE
 hi String     cterm=NONE     ctermfg=darkgreen  ctermbg=NONE
