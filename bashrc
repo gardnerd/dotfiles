@@ -29,7 +29,7 @@ export EDITOR=vim
 set -o vi
 
 # Add to PATH
-PATH=$HOME/bin:$PATH:$HOME/.local/bin
+PATH=$HOME/bin:$HOME/.cargo/bin:$PATH:$HOME/.local/bin
 export PATH
 
 # Newly created files have read access for everyone and write access for me
